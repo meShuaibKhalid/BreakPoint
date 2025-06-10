@@ -1,29 +1,32 @@
 {
-    "name": "Timer Interval",
-    "description": "A timer interval extension to help developers take short breaks after a specified time of coding session",
-    "version": "1.0",
-    "manifest_version": 3,
-    "action": {
-        "default_popup": "popup.html"
-    },
-    "permissions": [
-        "storage", 
-        "alarms",
-        "notifications",
-        "tabs",
-        "activeTab",
-        "scripting"
-    ],
-    "background": {
-        "service_worker": "background.js"
-    },
-    "host_permissions": [
-        "<all_urls>"
-    ],
-    "content_scripts": [
-        {
-            "matches": ["<all_urls>"],
-            "js": ["content.js"]
-        }
-    ]
+  "name": "Timer Interval",
+  "description": "A timer interval extension to help developers take short breaks after a specified time of coding session",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications",
+    "tabs",
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "icons": {
+    "16": "icons/breakpoint.png",
+    "48": "icons/breakpoint.png",
+    "128": "icons/breakpoint.png"
+  }
 }
